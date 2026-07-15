@@ -10,6 +10,7 @@ export default function Skills() {
           <ul className="skill-list">
             <li>Python</li>
             <li>SQL</li>
+            <li>Go</li>
             <li>TypeScript</li>
             <li>JavaScript</li>
           </ul>
@@ -19,21 +20,21 @@ export default function Skills() {
           <h3>Frameworks &amp; Tools</h3>
           <ul className="skill-list">
             <li>React / Next.js</li>
-            <li>FastAPI</li>
             <li>Supabase</li>
-            <li>GCP</li>
+            <li>AWS / CloudWatch</li>
             <li>Git / GitHub</li>
+            <li>CI / CD</li>
           </ul>
         </div>
 
         <div className="skill-group fade-in">
           <h3>AI / ML</h3>
           <ul className="skill-list">
-            <li>Multi-Agent Orchestration</li>
-            <li>Prompt Engineering</li>
+            <li>LLM Evaluation</li>
+            <li>RAG Pipelines</li>
+            <li>Multi-Agent Systems</li>
             <li>sklearn / pandas</li>
-            <li>CrewAI</li>
-            <li>Gemini / OpenAI APIs</li>
+            <li>OpenAI / Gemini APIs</li>
           </ul>
         </div>
 

@@ -14,9 +14,10 @@ export default function About() {
             and full-stack applications.
           </p>
           <p>
-            From engineering a <strong>multi-agent AI platform at Oracle</strong> to leading a
-            cross-functional team delivering a sustainability dashboard for 8 hospitals in Porto, I
-            thrive at the intersection of data, AI, and real-world impact.
+            From building <strong>AI-powered incident-triage systems at Capital One</strong> and a
+            multi-agent intelligence platform at Oracle to leading a cross-functional team delivering
+            a sustainability dashboard for 8 hospitals in Porto, I thrive at the intersection of
+            data, AI, and real-world impact.
           </p>
           <p>
             I care about building things that <strong>actually get used</strong> — not just technically
@@ -26,11 +27,11 @@ export default function About() {
         <div className="about-stats fade-in">
           <div className="stat-card">
             <div className="expertise-title">AI Engineering</div>
-            <div className="expertise-desc">Multi-agent systems, LLM orchestration &amp; prompt design</div>
+            <div className="expertise-desc">LLM systems, evaluation, orchestration &amp; incident intelligence</div>
           </div>
           <div className="stat-card">
             <div className="expertise-title">Full-Stack Dev</div>
-            <div className="expertise-desc">React, Next.js, TypeScript, Supabase &amp; FastAPI</div>
+            <div className="expertise-desc">React, Next.js, TypeScript, Supabase &amp; PostgreSQL</div>
           </div>
           <div className="stat-card">
             <div className="expertise-title">Data Science</div>

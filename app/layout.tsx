@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: 'Julia Shvartsman',
-  description: 'Data Scientist & AI Engineer at Berkeley',
+  description: 'Data scientist and AI engineer building production LLM systems and full-stack platforms.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
