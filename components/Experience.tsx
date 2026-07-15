@@ -11,11 +11,30 @@ export default function Experience() {
         </div>
         <div>
           <div className="exp-role">Software Engineer Intern</div>
-          <div className="exp-desc">
-            Incoming software engineering intern.
-          </div>
+          <ul className="exp-desc exp-bullets">
+            <li>
+              Building an AI pipeline on AWS that automatically surfaces log context and traces
+              linked-list call chains for on-call engineers, eliminating ~30 minutes of manual
+              context-gathering per incident using Python and Go.
+            </li>
+            <li>
+              Architecting a production-ready context-enrichment platform to generalize an
+              LLM-powered CloudWatch summarization service for multiple production log formats,
+              with the goal of scaling automated incident triage across engineering teams.
+            </li>
+            <li>
+              Developed a CI-integrated evaluation framework combining deterministic Python/regex
+              validation with LLM-as-a-Judge scoring, automatically blocking pull requests when
+              summarization quality regressed on 30 historical CloudWatch logs.
+            </li>
+          </ul>
           <div className="exp-tags">
-            <span className="tag">Software Engineering</span>
+            <span className="tag">AWS</span>
+            <span className="tag">Python</span>
+            <span className="tag">Go</span>
+            <span className="tag">CloudWatch</span>
+            <span className="tag">LLM Evaluation</span>
+            <span className="tag">CI/CD</span>
           </div>
         </div>
       </div>

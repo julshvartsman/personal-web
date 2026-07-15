@@ -371,6 +371,19 @@ h2 {
   line-height: 1.85;
 }
 
+.exp-bullets {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.exp-bullets li + li {
+  margin-top: 0.65rem;
+}
+
+.exp-bullets li::marker {
+  color: var(--accent2);
+}
+
 .exp-tags {
   display: flex;
   flex-wrap: wrap;
