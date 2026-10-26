@@ -1,33 +1,47 @@
 import type { Metadata } from 'next'
-import { DM_Serif_Display, DM_Sans } from 'next/font/google'
+import { Newsreader, Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const dmSerifDisplay = DM_Serif_Display({
-  weight: '400',
+const newsreader = Newsreader({
   subsets: ['latin'],
   style: ['normal', 'italic'],
   variable: '--font-serif',
   display: 'swap',
 })
 
-const dmSans = DM_Sans({
-  weight: ['300', '400', '500'],
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
 })
 
+const mono = JetBrains_Mono({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-mono',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
   title: 'Julia Shvartsman',
-  description: 'Data scientist and AI engineer building production LLM systems and full-stack platforms.',
+  description:
+    'Data Science at UC Berkeley. I build LLM systems and full-stack software — most recently at Capital One and Oracle.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${dmSerifDisplay.variable} ${dmSans.variable}`} data-theme="dark">
+    <html
+      lang="en"
+      className={`${newsreader.variable} ${inter.variable} ${mono.variable}`}
+      suppressHydrationWarning
+    >
       <head>
-        {/* Prevent flash of wrong theme on load */}
-        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();` }} />
+        {/* Set theme before paint: saved choice, else system preference */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`,
+          }}
+        />
       </head>
       <body>{children}</body>
     </html>

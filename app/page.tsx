@@ -1,25 +1,25 @@
-import Nav from '@/components/Nav'
-import Hero from '@/components/Hero'
-import About from '@/components/About'
+import Intro from '@/components/Intro'
+import SideNav from '@/components/SideNav'
 import Experience from '@/components/Experience'
 import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
-import Contact from '@/components/Contact'
+import Education from '@/components/Education'
 import Footer from '@/components/Footer'
-import ScrollAnimations from '@/components/ScrollAnimations'
+import Effects from '@/components/Effects'
 
 export default function Home() {
   return (
     <>
-      <Nav />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
-      <ScrollAnimations />
+      <Effects />
+      <SideNav />
+      <Intro />
+      <main className="page">
+        <Experience />
+        <Projects />
+        <Skills />
+        <Education />
+        <Footer />
+      </main>
     </>
   )
 }

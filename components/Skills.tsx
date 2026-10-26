@@ -1,43 +1,24 @@
+import { skillGroups } from '@/lib/content'
+
 export default function Skills() {
   return (
-    <section id="skills">
-      <div className="section-label">Skills</div>
-      <h2>What I work with</h2>
-      <div className="skills-grid">
-
-        <div className="skill-group fade-in">
-          <h3>Languages</h3>
-          <ul className="skill-list">
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Go</li>
-            <li>TypeScript</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
-
-        <div className="skill-group fade-in">
-          <h3>Frameworks &amp; Tools</h3>
-          <ul className="skill-list">
-            <li>React / Next.js</li>
-            <li>Supabase</li>
-            <li>AWS / CloudWatch</li>
-            <li>Git / GitHub</li>
-            <li>CI / CD</li>
-          </ul>
-        </div>
-
-        <div className="skill-group fade-in">
-          <h3>AI / ML</h3>
-          <ul className="skill-list">
-            <li>LLM Evaluation</li>
-            <li>RAG Pipelines</li>
-            <li>Multi-Agent Systems</li>
-            <li>sklearn / pandas</li>
-            <li>OpenAI / Gemini APIs</li>
-          </ul>
-        </div>
-
+    <section className="section" id="skills">
+      <h2 data-reveal>Skills</h2>
+      <p className="hint" data-reveal>Hover a skill to see where I&apos;ve used it.</p>
+      <div className="skill-groups">
+        {skillGroups.map((g) => (
+          <div className="skill-group" key={g.label} data-reveal>
+            <h3>{g.label}</h3>
+            <ul>
+              {g.skills.map((s) => (
+                <li key={s.name} className={s.usedIn ? 'skill has-use' : 'skill'} tabIndex={s.usedIn ? 0 : undefined}>
+                  {s.name}
+                  {s.usedIn && <span className="skill-use" role="tooltip">{s.usedIn}</span>}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   )
